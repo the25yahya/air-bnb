@@ -9,7 +9,8 @@ import mic from '../src/imgs/image 22.png'
 import swimmer from '../src/imgs/image 23.png'
 import yoga from '../src/imgs/image 25.png'
 import singer from '../src/imgs/image 24.png'
-
+import katie from '../src/imgs/image 12.png'
+import star from '../src/imgs/Star 1.png'
 function Nav(){
   return(
     <nav>
@@ -99,7 +100,32 @@ return(
 </div>
 )
 }
-
+function Body(){
+  return(
+    <div className='cards'>
+          <div className='card1'>
+       <div className='div1-card'>
+         <p>sold out</p>
+         <img
+          src={katie}
+         />
+       </div>
+       <div className='div2-card'>
+          <img
+            src={star}
+          />
+          <p id='rating'>5.0</p>
+          <p>(6)</p>
+          <p>.usa</p>
+       </div>
+       <div className='div3-card'>
+        <p>life lessons with katie zaferies</p>
+        <p><span>from $136</span>/person</p>
+       </div>
+    </div>
+    </div>
+  )
+}
 
 function App() {
   return(
@@ -107,6 +133,7 @@ function App() {
        <Nav/>
        <Main/>
        <Intro/>
+       <Body/>
     </div>
   )
 }
