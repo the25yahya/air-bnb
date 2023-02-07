@@ -20,7 +20,7 @@ body{
 nav{
   width: 500px;
   margin-bottom: 10px;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 0 0 4px rgb(171, 167, 167);
   padding: 20px;
 }
 main{
@@ -69,6 +69,7 @@ main{
 }
 .card1 .div1-card p{
   position: absolute;
+  margin: 5px;
   top: 3%;
   left: 1%;
   border-radius: 3px;
@@ -99,4 +100,11 @@ main{
 .card1 .div3-card span{
   font-weight: 800;
   margin-right: 3px;
+}
+.card-container{
+  display: flex;
+  overflow-x: scroll;
+}
+.card-container img {
+  height: 280px;
 }

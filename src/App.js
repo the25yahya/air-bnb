@@ -11,6 +11,8 @@ import yoga from '../src/imgs/image 25.png'
 import singer from '../src/imgs/image 24.png'
 import katie from '../src/imgs/image 12.png'
 import star from '../src/imgs/Star 1.png'
+import wedding from '../src/imgs/wedding-photography 1.png'
+import bike from '../src/imgs/mountain-bike 1.png'
 function Nav(){
   return(
     <nav>
@@ -100,30 +102,62 @@ return(
 </div>
 )
 }
-function Body(){
+
+function Card (props){
   return(
     <div className='cards'>
           <div className='card1'>
        <div className='div1-card'>
-         <p>sold out</p>
+         <p>{props.state}</p>
          <img
-          src={katie}
+          src={props.img}
          />
        </div>
        <div className='div2-card'>
           <img
             src={star}
           />
-          <p id='rating'>5.0</p>
+          <p id='rating'>{props.rating}</p>
           <p>(6)</p>
-          <p>.usa</p>
+          <p id='con'>{props.con}</p>
        </div>
        <div className='div3-card'>
-        <p>life lessons with katie zaferies</p>
-        <p><span>from $136</span>/person</p>
+        <p id='card-title'>{props.title}</p>
+        <p><span id='price'>{props.price}</span>/person</p>
        </div>
     </div>
     </div>
+  )
+}
+function Body(){
+  return(
+<div className='card-container'>
+<Card
+    state = 'sold out'
+    img = {katie}
+    rating = '5.0'
+    con = 'usa'
+    title = 'life lessons with katie zafferes'
+    price = 'from 136$'
+    />
+    <Card
+          state = 'online'
+    img = {wedding}
+    rating = '5.0'
+    con = 'usa'
+    title = 'learn wedding photography'
+    price = 'from 125$'
+    />
+        <Card
+    state = 'online'
+    img = {bike}
+    rating = '3.0'
+    con = 'usa'
+    title = 'groupe mountain biking'
+    price = 'from 150$'
+    />
+</div>
+
   )
 }
 
